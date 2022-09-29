@@ -1,0 +1,12 @@
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\bin\Debug\net5.0\TreeStructure.Domain.deps.json
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\bin\Debug\net5.0\TreeStructure.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\bin\Debug\net5.0\ref\TreeStructure.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\bin\Debug\net5.0\TreeStructure.Domain.pdb
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.csproj.AssemblyReference.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.AssemblyInfoInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.AssemblyInfo.cs
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\ref\TreeStructure.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Domain\obj\Debug\net5.0\TreeStructure.Domain.pdb

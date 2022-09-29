@@ -1,0 +1,17 @@
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Application.deps.json
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Application.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\ref\TreeStructure.Application.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Application.pdb
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Domain.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Persistance.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Domain.pdb
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\bin\Debug\net5.0\TreeStructure.Persistance.pdb
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.csproj.AssemblyReference.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.AssemblyInfoInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.AssemblyInfo.cs
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.csproj.CoreCompileInputs.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.csproj.CopyComplete
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\ref\TreeStructure.Application.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Application\obj\Debug\net5.0\TreeStructure.Application.pdb

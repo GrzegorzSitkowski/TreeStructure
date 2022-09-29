@@ -1,0 +1,28 @@
+<div class="container" my-5>
+    <h1 class="mb-3">Tree</h1>
+    <button type="button" class="btn btn-primary" routerLink="add">Add node</button>
+    <br>
+    <table class="table table-dark table-striped" *ngIf="nodes && nodes.length > 0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>ParentId</th>
+                <th>Leafs</th>
+                <th>ChildrenId</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr *ngFor="let node of nodes">
+                  <td>{{node.name}}</td>
+                  <td>{{node.ParentId}}</td>
+                  <td>{{node.Leafs}}</td>
+                  <td>{{node.ChildrenId}}</td>
+                  <td>
+                    <button type="button" class="btn btn-warning" [routerLink]="['/nodes', 'edit', node.id]">Edit</button>
+                </td>
+                </tr>           
+        </tbody>
+    </table>
+    <p *ngIf="!nodes || nodes.length <= 0">No nodes found.</p>
+</div>
