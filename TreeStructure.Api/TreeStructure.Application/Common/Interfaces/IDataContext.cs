@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using TreeStructure.Domain;
+using TreeStructure.Domain.Entities;
 
 namespace TreeStructure.Application.Common.Interfaces
 {

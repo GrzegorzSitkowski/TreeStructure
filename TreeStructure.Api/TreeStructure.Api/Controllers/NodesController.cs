@@ -10,30 +10,31 @@ using TreeStructure.Application.Nodes.Commands.DeleteNode;
 using TreeStructure.Application.Nodes.Commands.UpdateNode;
 using TreeStructure.Application.Nodes.Queries.FirstNode;
 using TreeStructure.Application.Nodes.Queries.GetNodeDetail;
+using TreeStructure.Application.Nodes.Queries.GetNodes;
 using TreeStructure.Domain;
+using TreeStructure.Persistance;
 
 namespace TreeStructure.Api.Controllers
 {
     [Route("api/nodes")]
     public class NodesController : BaseApiController
     {
-        private readonly IDataContext _context;
-        public NodesController(IDataContext context)
+        private readonly DataContext _context;
+        public NodesController(DataContext context)
         {
             _context = context;
         }
         
         [HttpGet("withoutParents")]
-        public async Task<ActionResult<FirstNodeDto>> GetFirstNode()
+        public async Task<ActionResult<FirstNodeVm>> GetFirstNode()
         {
-            var firstNode = await _context.Nodes.AsNoTracking().Where(p => p.ParentId == null).ToListAsync();
-            return Ok(firstNode);
+            return await Mediator.Send(new GetFirstNodeQuery());
         }
         
         [HttpGet]
-        public async Task<ActionResult<TreeNodeDto>> GetNodes()
+        public async Task<ActionResult<TreeNodeVm>> GetNodes()
         {
-            var nodes = await _context.Nodes.AsNoTracking().Where(p => p.Id != null).ToListAsync();
+            var nodes = await _context.Nodes.AsNoTracking().ToListAsync();
             return Ok(nodes);
         }
 

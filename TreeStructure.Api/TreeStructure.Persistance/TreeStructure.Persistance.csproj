@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TreeStructure.Application\TreeStructure.Application.csproj" />
     <ProjectReference Include="..\TreeStructure.Domain\TreeStructure.Domain.csproj" />
   </ItemGroup>
 

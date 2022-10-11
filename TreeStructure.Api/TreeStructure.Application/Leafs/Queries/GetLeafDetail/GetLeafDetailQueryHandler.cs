@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,10 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Leafs.Queries.GetLeafDetail;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
 
-namespace TreeStructure.Application.Leafs
+namespace TreeStructure.Application.Leafs.Queries.GetLeafDetail
 {
-    public class GetLeafDetailQueryHandler
+    public class GetLeafDetailQueryHandler : IRequestHandler<GetLeafDetailQuery,LeafDetailVm>
     {
         private readonly IDataContext _context;
         private readonly IMapper _mapper;
@@ -26,6 +26,8 @@ namespace TreeStructure.Application.Leafs
         public async Task<LeafDetailVm> Handle(GetLeafDetailQuery request, CancellationToken cancellationToken)
         {
             var leaf = await _context.Leafs.FindAsync(request.Id);
+            leaf.LeafsChildren = await _context.Leafs.Where(p => p.LeafParentId == request.Id).ToListAsync();
+
             var leafVm = _mapper.Map<LeafDetailVm>(leaf);
 
             return leafVm;

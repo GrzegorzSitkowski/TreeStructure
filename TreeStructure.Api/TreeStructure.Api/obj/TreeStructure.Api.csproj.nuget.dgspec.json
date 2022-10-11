@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Application\\TreeStructure.Application.csproj": {
                 "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Application\\TreeStructure.Application.csproj"
+              },
+              "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Persistance\\TreeStructure.Persistance.csproj": {
+                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Persistance\\TreeStructure.Persistance.csproj"
               }
             }
           }
@@ -64,7 +67,7 @@
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
@@ -123,9 +126,6 @@
             "projectReferences": {
               "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Domain\\TreeStructure.Domain.csproj": {
                 "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Domain\\TreeStructure.Domain.csproj"
-              },
-              "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Persistance\\TreeStructure.Persistance.csproj": {
-                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Persistance\\TreeStructure.Persistance.csproj"
               }
             }
           }
@@ -144,6 +144,10 @@
               "target": "Package",
               "version": "[11.0.1, )"
             },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.2.2, )"
@@ -151,6 +155,18 @@
             "MediatR": {
               "target": "Package",
               "version": "[10.0.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
@@ -258,6 +274,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Application\\TreeStructure.Application.csproj": {
+                "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Application\\TreeStructure.Application.csproj"
+              },
               "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Domain\\TreeStructure.Domain.csproj": {
                 "projectPath": "C:\\Users\\sitko\\OneDrive\\Pulpit\\TreeStructure\\TreeStructure.Api\\TreeStructure.Domain\\TreeStructure.Domain.csproj"
               }

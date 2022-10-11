@@ -16,3 +16,5 @@ C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Per
 C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Persistance\obj\Debug\net5.0\ref\TreeStructure.Persistance.dll
 C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Persistance\obj\Debug\net5.0\TreeStructure.Persistance.pdb
 C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Persistance\obj\Debug\net5.0\TreeStructure.Persistance.genruntimeconfig.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Persistance\bin\Debug\net5.0\TreeStructure.Application.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Persistance\bin\Debug\net5.0\TreeStructure.Application.pdb

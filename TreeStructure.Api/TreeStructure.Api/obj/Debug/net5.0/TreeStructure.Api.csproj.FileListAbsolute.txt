@@ -67,3 +67,9 @@ C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api
 C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\obj\Debug\net5.0\ref\TreeStructure.Api.dll
 C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\obj\Debug\net5.0\TreeStructure.Api.pdb
 C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\obj\Debug\net5.0\TreeStructure.Api.genruntimeconfig.cache
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\sitko\OneDrive\Pulpit\TreeStructure\TreeStructure.Api\TreeStructure.Api\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

@@ -10,6 +10,7 @@ using TreeStructure.Application.Leafs.Commands.CreateLeaf;
 using TreeStructure.Application.Leafs.Commands.DeleteLeaf;
 using TreeStructure.Application.Leafs.Commands.UpdateLeaf;
 using TreeStructure.Application.Leafs.Queries.GetLeafDetail;
+using TreeStructure.Application.Leafs.Queries.GetLeafs;
 using TreeStructure.Domain;
 
 namespace TreeStructure.Api.Controllers
@@ -29,7 +30,7 @@ namespace TreeStructure.Api.Controllers
             return vm;
         }
         [HttpGet]
-        public async Task<ActionResult<LeafDto>> GetLeafs()
+        public async Task<ActionResult<LeafsDto>> GetLeafs()
         {
             var leafs = await _context.Leafs.AsNoTracking().Where(p => p.ParentId != null).ToListAsync();
             return Ok(leafs);

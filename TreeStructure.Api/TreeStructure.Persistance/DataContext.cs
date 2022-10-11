@@ -5,21 +5,25 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Domain;
+using TreeStructure.Domain.Entities;
 
 namespace TreeStructure.Persistance
 {
-    public class DataContext : DbContext
+    public class DataContext : DbContext, IDataContext
     {
-        public DataContext(DbContextOptions options) : base(options)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
 
         public DbSet<Leaf> Leafs { get; set; }
         public DbSet<TreeNode> Nodes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            modelBuilder.SeedData();
  
             base.OnModelCreating(modelBuilder);
 

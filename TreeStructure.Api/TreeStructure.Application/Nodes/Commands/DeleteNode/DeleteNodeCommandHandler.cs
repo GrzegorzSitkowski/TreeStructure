@@ -7,11 +7,9 @@ using System.Threading;
 using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Nodes.Commands.DeleteNode;
-using TreeStructure.Persistance;
-
 namespace TreeStructure.Application.Nodes
 {
-    public class DeleteNodeCommandHandler
+    public class DeleteNodeCommandHandler : IRequestHandler<DeleteNodeCommand>
     {
         private readonly IDataContext _context;
         public DeleteNodeCommandHandler(IDataContext context)

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Nodes.Commands.CreateNode;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
+using TreeStructure.Domain.Entities;
 
 namespace TreeStructure.Application.Nodes
 {
@@ -22,18 +22,11 @@ namespace TreeStructure.Application.Nodes
             public async Task<int> Handle(CreateNodeCommand request, CancellationToken cancellationToken)
             {
 
-                var newNode = new TreeNode
+                TreeNode newNode = new()
                 {
                     Name = request.Name,
                     ParentId = request.ParentId
-
                 };
-
-                if (newNode.ParentId is { })
-                {
-                    var parent = await _context.Nodes.FindAsync(request.ParentId);
-                    parent.Children.Add(newNode);
-                }
 
                 _context.Nodes.Add(newNode);
 

@@ -19,12 +19,18 @@ namespace TreeStructure.Persistance.Migrations
                 .HasAnnotation("ProductVersion", "5.0.17")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TreeStructure.Domain.Leaf", b =>
+            modelBuilder.Entity("TreeStructure.Domain.Entities.Leaf", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("LeafId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("LeafParentId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
@@ -32,20 +38,43 @@ namespace TreeStructure.Persistance.Migrations
                     b.Property<int>("ParentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Text")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("LeafId");
 
                     b.HasIndex("ParentId");
 
                     b.ToTable("Leafs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 21,
+                            Name = "FirstLeaf",
+                            ParentId = 11
+                        },
+                        new
+                        {
+                            Id = 22,
+                            Name = "SecondLeaf",
+                            ParentId = 11
+                        },
+                        new
+                        {
+                            Id = 23,
+                            Name = "ThirdLeaf",
+                            ParentId = 12
+                        },
+                        new
+                        {
+                            Id = 24,
+                            LeafParentId = 23,
+                            Name = "FourthLeaf",
+                            ParentId = 12
+                        });
                 });
 
-            modelBuilder.Entity("TreeStructure.Domain.TreeNode", b =>
+            modelBuilder.Entity("TreeStructure.Domain.Entities.TreeNode", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -66,11 +95,41 @@ namespace TreeStructure.Persistance.Migrations
                     b.HasIndex("TreeNodeId");
 
                     b.ToTable("Nodes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 11,
+                            Name = "FirstNode",
+                            ParentId = 0
+                        },
+                        new
+                        {
+                            Id = 12,
+                            Name = "SecondNode",
+                            ParentId = 11
+                        },
+                        new
+                        {
+                            Id = 13,
+                            Name = "ThirdNode",
+                            ParentId = 11
+                        },
+                        new
+                        {
+                            Id = 14,
+                            Name = "FourthNode",
+                            ParentId = 12
+                        });
                 });
 
-            modelBuilder.Entity("TreeStructure.Domain.Leaf", b =>
+            modelBuilder.Entity("TreeStructure.Domain.Entities.Leaf", b =>
                 {
-                    b.HasOne("TreeStructure.Domain.TreeNode", "Parent")
+                    b.HasOne("TreeStructure.Domain.Entities.Leaf", null)
+                        .WithMany("LeafsChildren")
+                        .HasForeignKey("LeafId");
+
+                    b.HasOne("TreeStructure.Domain.Entities.TreeNode", "Parent")
                         .WithMany("Leafs")
                         .HasForeignKey("ParentId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -79,18 +138,23 @@ namespace TreeStructure.Persistance.Migrations
                     b.Navigation("Parent");
                 });
 
-            modelBuilder.Entity("TreeStructure.Domain.TreeNode", b =>
+            modelBuilder.Entity("TreeStructure.Domain.Entities.TreeNode", b =>
                 {
-                    b.HasOne("TreeStructure.Domain.TreeNode", null)
-                        .WithMany("Children")
+                    b.HasOne("TreeStructure.Domain.Entities.TreeNode", null)
+                        .WithMany("Nodes")
                         .HasForeignKey("TreeNodeId");
                 });
 
-            modelBuilder.Entity("TreeStructure.Domain.TreeNode", b =>
+            modelBuilder.Entity("TreeStructure.Domain.Entities.Leaf", b =>
                 {
-                    b.Navigation("Children");
+                    b.Navigation("LeafsChildren");
+                });
 
+            modelBuilder.Entity("TreeStructure.Domain.Entities.TreeNode", b =>
+                {
                     b.Navigation("Leafs");
+
+                    b.Navigation("Nodes");
                 });
 #pragma warning restore 612, 618
         }

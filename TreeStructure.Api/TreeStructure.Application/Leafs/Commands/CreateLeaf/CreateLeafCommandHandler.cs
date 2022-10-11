@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Leafs.Commands.CreateLeaf;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
+using TreeStructure.Domain.Entities;
 
 namespace TreeStructure.Application.Leafs
 {
@@ -21,26 +21,16 @@ namespace TreeStructure.Application.Leafs
         }
             public async Task<int> Handle(CreateLeafCommand request, CancellationToken cancellationToken)
             {
-                var parentId = request.ParentId;
-
-                var parent = await _context.Nodes.FindAsync(parentId);
-
             Leaf leaf = new()
             {
                 Name = request.Name,
-                Title = request.Title,
-                Text = request.Text,
-                Parent = request.Parent,
-                ParentId = request.ParentId
+                ParentId = request.ParentId,
+                //Parent = request.Parent,
+                LeafParentId =  request.LeafParentId
             };
 
                 _context.Leafs.Add(leaf);
-
-                parent.Leafs.Add(leaf);
-
                 await _context.SaveChangesAsync(cancellationToken);
-
-                //if (!result) return Result<Unit>.Failure("Failed to create leaf");
 
                 return leaf.Id;
             }

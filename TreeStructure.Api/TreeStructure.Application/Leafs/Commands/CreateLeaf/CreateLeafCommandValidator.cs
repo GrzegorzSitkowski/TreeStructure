@@ -12,8 +12,6 @@ namespace TreeStructure.Application.Leafs.Commands.CreateLeaf
         public CreateLeafCommandValidator()
         {
             RuleFor(x => x.Name).NotEmpty().MaximumLength(30);
-            RuleFor(x => x.Title).NotEmpty().MaximumLength(30);
-            RuleFor(x => x.Text).NotEmpty().MaximumLength(30);
         }
     }
 }

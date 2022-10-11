@@ -1,0 +1,23 @@
+<div class="container my-5">
+    <h1 class="mb-3">Nodes</h1>
+
+    <table class="table table-striped" *ngIf="nodes && nodes.length > 0">
+        <thead>
+            <tr>
+               <th>Id</th> 
+               <th>Name</th> 
+               <th>ParentId</th> 
+               <th></th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let node of nodes">
+                <td>{{node.id}}</td>
+                <td>{{node.name}}</td>
+                <td>{{node.parentId}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="!nodes || nodes.length <= 0">No items found.</p>
+</div>

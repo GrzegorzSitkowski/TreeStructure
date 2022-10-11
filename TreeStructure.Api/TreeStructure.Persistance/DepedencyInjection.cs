@@ -1,11 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TreeStructure.Application.Common.Interfaces;
 
 namespace TreeStructure.Persistance
 {
@@ -13,9 +9,9 @@ namespace TreeStructure.Persistance
     {
         public static IServiceCollection AddPersistance(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<DbContext>(options => options.UseSqlServer(configuration.GetConnectionString("TreeStructureDatabase")));
+            services.AddDbContext<DataContext>(options => options.UseSqlServer(configuration.GetConnectionString("TreeStructureDatabase")));
 
-            services.AddScoped<DbContext, DbContext>();
+            services.AddScoped<IDataContext, DataContext>();
             return services;
         }
     }

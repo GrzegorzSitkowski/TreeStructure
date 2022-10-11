@@ -8,7 +8,7 @@ using TreeStructure.Domain;
 
 namespace TreeStructure.Application.Nodes.Queries.GetNodes
 {
-    public class GetNodesQuery : IRequest<TreeNodeDto>
+    public class GetNodesQuery : IRequest<TreeNodeVm>
     {
     }
 }

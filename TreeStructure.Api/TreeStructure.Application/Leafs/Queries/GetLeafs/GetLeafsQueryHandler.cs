@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Leafs.Queries.GetLeafs;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
+using TreeStructure.Domain.Entities;
 
-namespace TreeStructure.Application.Leafs
+namespace TreeStructure.Application.Leafs.Queries.GetLeafs
 {
     public class GetLeafsQueryHandler
     {

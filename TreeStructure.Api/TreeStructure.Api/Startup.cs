@@ -15,6 +15,7 @@ using Microsoft.EntityFrameworkCore;
 using TreeStructure.Persistance;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using TreeStructure.Application;
 
 namespace TreeStructure.Api
 {
@@ -28,8 +29,9 @@ namespace TreeStructure.Api
         public IConfiguration Configuration { get; }
         public void ConfigureServices(IServiceCollection services)
             {
+            services.AddAplication();
             services.AddPersistance(Configuration);
-
+            
 
             services.AddControllers();
                 services.AddSwaggerGen(c =>

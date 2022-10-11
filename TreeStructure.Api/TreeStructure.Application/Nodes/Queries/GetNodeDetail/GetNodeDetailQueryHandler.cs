@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,10 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Nodes.Queries.GetNodeDetail;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
 
 namespace TreeStructure.Application.Nodes
 {
-    public class GetNodeDetailQueryHandler
+    public class GetNodeDetailQueryHandler : IRequestHandler<GetNodeDetailQuery, NodeDetailVm>
     {
         private readonly IDataContext _context;
         private readonly IMapper _mapper;
@@ -26,7 +26,9 @@ namespace TreeStructure.Application.Nodes
 
         public async Task<NodeDetailVm> Handle(GetNodeDetailQuery request, CancellationToken cancellationToken)
         {
-            var node = await _context.Nodes.FindAsync(request.Id);
+            var node = await _context.Nodes.Where(p => p.Id == request.Id).FirstOrDefaultAsync(cancellationToken);
+            node.Leafs = await _context.Leafs.Where(p => p.ParentId == request.Id).ToListAsync();
+            node.Nodes = await _context.Nodes.Where(p => p.ParentId == request.Id).ToListAsync();
 
             var nodeVm = _mapper.Map<NodeDetailVm>(node);
             return nodeVm;

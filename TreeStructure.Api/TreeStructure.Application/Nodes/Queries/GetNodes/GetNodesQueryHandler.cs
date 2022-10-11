@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,11 +11,10 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Nodes.Queries.GetNodes;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
 
 namespace TreeStructure.Application.Nodes
 {
-    public class GetNodesQueryHandler : IRequestHandler<GetNodesQuery, TreeNodeDto>
+    public class GetNodesQueryHandler : IRequestHandler<GetNodesQuery, TreeNodeVm>
     {
         private readonly IDataContext _context;
         private readonly IMapper _mapper;
@@ -24,25 +24,10 @@ namespace TreeStructure.Application.Nodes
             _context = context;
             _mapper = mapper;
         }
-        public async Task<TreeNodeDto> Handle(TreeNodeDto request, CancellationToken cancellationToken)
+        public async Task<TreeNodeVm> Handle(GetNodesQuery request, CancellationToken cancellationToken)
         {
-
-            TreeNode node = await _context.Nodes
-                .Include(x => x.Children)
-                .Include(x => x.Leafs)
-                .Where(x => x.Id == request.Id)
-                .FirstOrDefaultAsync();
-
-            return(
-                new TreeNodeDto
-                  {
-                    Id = node.Id,
-                    Name = node.Name,
-                    ParentId = node.ParentId,
-                    ChildrenIds = node.Children.Select(x => x.Id).ToList(),
-                    Leafs = node.Leafs.Select(l => new LeafsDto { Id = l.Id, Name = l.Name, ParentId = l.ParentId, Text = l.Text, Title = l.Title }).ToList()
-                  }
-                  );
+            var nodes = await _context.Nodes.AsNoTracking().ProjectTo<TreeNodeVm>(_mapper.ConfigurationProvider).ToListAsync();
+            return new TreeNodeVm();
         }
     }
 }

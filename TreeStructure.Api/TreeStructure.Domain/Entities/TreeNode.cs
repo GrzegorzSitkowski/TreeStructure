@@ -4,14 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TreeStructure.Domain
+namespace TreeStructure.Domain.Entities
 {
     public class TreeNode
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public ICollection<Leaf> Leafs { get; set; } = new List<Leaf>();
-        public ICollection<TreeNode> Children { get; set; } = new List<TreeNode>();
+        public ICollection<TreeNode> Nodes { get; set; }
+        public ICollection<Leaf> Leafs { get; set; }
         public int? ParentId { get; set; }
     }
 }

@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 using TreeStructure.Application.Common.Interfaces;
 using TreeStructure.Application.Leafs.Commands.UpdateLeaf;
 using TreeStructure.Domain;
-using TreeStructure.Persistance;
 
 namespace TreeStructure.Application.Leafs
 {
@@ -27,6 +26,8 @@ namespace TreeStructure.Application.Leafs
                     return Unit.Value;
 
                 leaf.Name = request.Name;
+                leaf.ParentId = request.ParentId;
+                leaf.LeafParentId = request.LeafParentId;
 
                 var result = await _context.SaveChangesAsync(cancellationToken);
 

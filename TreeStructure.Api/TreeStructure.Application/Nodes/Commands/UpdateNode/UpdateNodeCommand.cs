@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TreeStructure.Domain;
+using TreeStructure.Domain.Entities;
 
 namespace TreeStructure.Application.Nodes.Commands.UpdateNode
 {

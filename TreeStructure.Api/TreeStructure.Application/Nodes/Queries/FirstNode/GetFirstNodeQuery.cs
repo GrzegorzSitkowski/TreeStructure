@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace TreeStructure.Application.Nodes.Queries.FirstNode
 {
-    public class GetFirstNodeQuery : IRequest<FirstNodeDto>
+    public class GetFirstNodeQuery : IRequest<FirstNodeVm>
     {
+        //public int Id { get; set; }
     }
 }
